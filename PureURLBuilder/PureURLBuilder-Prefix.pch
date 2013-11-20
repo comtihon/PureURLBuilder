@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'PureURLBuilder' target in the 'PureURLBuilder' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
