@@ -13,3 +13,4 @@ build/
 !default.xcworkspace
 xcuserdata/
 profile
+lib/

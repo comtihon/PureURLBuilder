@@ -32,14 +32,13 @@
 		693F5EE1BBE821DCF3A656A6 /* ArrayPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 693F50CC297C429407D8A124 /* ArrayPath.m */; };
 		693F5FA5CC6737247D18F1CC /* URL.m in Sources */ = {isa = PBXBuildFile; fileRef = 693F51A51DE4C7D4C3128C69 /* URL.m */; };
 		D97B0BAC18346AAB00901E85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97B0BAB18346AAB00901E85 /* Foundation.framework */; };
-		D97B0BB118346AAB00901E85 /* PureURLBuilder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D97B0BB018346AAB00901E85 /* PureURLBuilder.h */; };
-		D97B0BB318346AAB00901E85 /* PureURLBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D97B0BB218346AAB00901E85 /* PureURLBuilder.m */; };
 		D97B0BBB18346AAB00901E85 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97B0BBA18346AAB00901E85 /* SenTestingKit.framework */; };
 		D97B0BBD18346AAB00901E85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97B0BBC18346AAB00901E85 /* UIKit.framework */; };
 		D97B0BBE18346AAB00901E85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97B0BAB18346AAB00901E85 /* Foundation.framework */; };
 		D97B0BC118346AAB00901E85 /* libPureURLBuilder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D97B0BA818346AAB00901E85 /* libPureURLBuilder.a */; };
 		D97B0BC718346AAB00901E85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D97B0BC518346AAB00901E85 /* InfoPlist.strings */; };
 		D97B0BCA18346AAB00901E85 /* PureURLBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D97B0BC918346AAB00901E85 /* PureURLBuilderTests.m */; };
+		D9E8745E1845D36B00761F7D /* URL.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 693F5E72CE76646AD7D5C842 /* URL.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +52,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D97B0BA618346AAB00901E85 /* CopyFiles */ = {
+		D9E8745D1845D36400761F7D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
+			dstPath = include;
+			dstSubfolderSpec = 7;
 			files = (
-				D97B0BB118346AAB00901E85 /* PureURLBuilder.h in CopyFiles */,
+				D9E8745E1845D36B00761F7D /* URL.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +92,6 @@
 		D97B0BA818346AAB00901E85 /* libPureURLBuilder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPureURLBuilder.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97B0BAB18346AAB00901E85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D97B0BAF18346AAB00901E85 /* PureURLBuilder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PureURLBuilder-Prefix.pch"; sourceTree = "<group>"; };
-		D97B0BB018346AAB00901E85 /* PureURLBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PureURLBuilder.h; sourceTree = "<group>"; };
-		D97B0BB218346AAB00901E85 /* PureURLBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PureURLBuilder.m; sourceTree = "<group>"; };
 		D97B0BB918346AAB00901E85 /* PureURLBuilderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PureURLBuilderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97B0BBA18346AAB00901E85 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D97B0BBC18346AAB00901E85 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -155,7 +152,8 @@
 				693F5871402D2CCC06D624D0 /* StringTokenizer.m */,
 				693F5FA12E8EE34160C54547 /* StringTokenizer.h */,
 			);
-			path = src;
+			name = src;
+			path = ../src;
 			sourceTree = "<group>";
 		};
 		D97B0B9F18346AAB00901E85 = {
@@ -165,7 +163,6 @@
 				D97B0BC218346AAB00901E85 /* PureURLBuilderTests */,
 				D97B0BAA18346AAB00901E85 /* Frameworks */,
 				D97B0BA918346AAB00901E85 /* Products */,
-				693F5CB07A7B2DF704B3A673 /* src */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,8 +188,7 @@
 		D97B0BAD18346AAB00901E85 /* PureURLBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				D97B0BB018346AAB00901E85 /* PureURLBuilder.h */,
-				D97B0BB218346AAB00901E85 /* PureURLBuilder.m */,
+				693F5CB07A7B2DF704B3A673 /* src */,
 				D97B0BAE18346AAB00901E85 /* Supporting Files */,
 			);
 			path = PureURLBuilder;
@@ -234,7 +230,7 @@
 			buildPhases = (
 				D97B0BA418346AAB00901E85 /* Sources */,
 				D97B0BA518346AAB00901E85 /* Frameworks */,
-				D97B0BA618346AAB00901E85 /* CopyFiles */,
+				D9E8745D1845D36400761F7D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -323,7 +319,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D97B0BB318346AAB00901E85 /* PureURLBuilder.m in Sources */,
 				693F5E15DF4087ED6081CDF3 /* URL.m in Sources */,
 				693F509D4833AF61D8A94767 /* Host.m in Sources */,
 				693F54530B0DEACF5FFD98E3 /* Path.m in Sources */,
@@ -435,9 +430,11 @@
 		D97B0BCE18346AAB00901E85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = lib/;
 				DSTROOT = /tmp/PureURLBuilder.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PureURLBuilder/PureURLBuilder-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -447,9 +444,11 @@
 		D97B0BCF18346AAB00901E85 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = lib/;
 				DSTROOT = /tmp/PureURLBuilder.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PureURLBuilder/PureURLBuilder-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -505,6 +504,7 @@
 				D97B0BCF18346AAB00901E85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D97B0BD018346AAB00901E85 /* Build configuration list for PBXNativeTarget "PureURLBuilderTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +513,7 @@
 				D97B0BD218346AAB00901E85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
