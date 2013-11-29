@@ -23,9 +23,9 @@ To remove scheme - pass `nil`, as a param:
 You can add or change host to url with `withHost` method, passing NSString as host:
 
     URL *google = [[URL http].withHost(@"google.com") retain];
-To remoeve host - pass `nil` as a param:
+To remove host - pass `nil` as a param:
 
-    google.withHist(nil);
+    google.withHost(nil);
 ####Path management
 To add path to url use `withPath` with NSString param:
 
@@ -49,7 +49,7 @@ For array param use `withArrayParam`, passing NSArray, as a param:
     URL *params = google.withArrayParam(@"c", array);
 To override param - use `withParam` method, based on a type of param, with the same key once again - parameter will be overrided with a new value:
 
-    google.withStringParam(@"one",@"foo").withStringParam(@"one", @"foo");
+    google.withStringParam(@"one",@"foo").withStringParam(@"one", @"bar");
 To remove param - override it with `nil`.
 ####Port management:
 To set or override port - use `withPort` method:
@@ -69,9 +69,9 @@ Pattern overrides your variable (google) with new return value, when you called 
 
     [google release];
     google = [google.withStringParam(@"uid", @"anotherUid").withIntParam(@"currency", 5000) retain];
-Here you release the tail, which you retained earlier, as it was retained in new param added. Variable `google` will be overriten and if you do not released it - you will loose memory. New tail needed to be retained now.  
-Short and simple room - to save URL - retain its tail. To release URL - release its tail.  
-If you create url and build it in a moment (`[[URL http].withHost(@"google.com") toString]`) - it will returned you autoreleased NSString. So if you prefer saving string - do not forget to retain it.
+Here you release the tail, which you retained earlier, as it will be retained in new param added. Variable `google` will be overriten and if you do not released it - you will loose memory. New tail needed to be retained now.  
+*Short and simple rule* - `to save URL - retain its tail. To release URL - release its tail.`  
+If you create url and build it in a moment (`[[URL http].withHost(@"google.com") toString]`) - it will return you autoreleased NSString. So if you want to save string - do not forget to retain it.
 ####Examples:
 
     [[URL http]
