@@ -430,6 +430,7 @@
 		D97B0BCE18346AAB00901E85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CONFIGURATION_BUILD_DIR = libPureURLBuilder/;
 				DSTROOT = /tmp/PureURLBuilder.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -444,6 +445,7 @@
 		D97B0BCF18346AAB00901E85 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CONFIGURATION_BUILD_DIR = libPureURLBuilder/;
 				DSTROOT = /tmp/PureURLBuilder.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
